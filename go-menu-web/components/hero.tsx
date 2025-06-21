@@ -1,43 +1,29 @@
 import { NextLogo } from "./next-logo";
 import { SupabaseLogo } from "./supabase-logo";
+import { Button } from "./ui/button";
+import Link from "next/link";
+
 
 export function Hero() {
   return (
-    <div className="flex flex-col gap-16 items-center">
+    <div className="flex flex-col items-center">
       <div className="flex gap-8 justify-center items-center">
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SupabaseLogo />
-        </a>
-        <span className="border-l rotate-45 h-6" />
-        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-          <NextLogo />
-        </a>
+        <span className="border-l rotate-45 h-20" />
       </div>
-      <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
-      <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        The fastest way to build apps with{" "}
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Supabase
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://nextjs.org/"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Next.js
-        </a>
+      <h1 className="sr-only">,</h1>
+      <p className="text-7xl lg:text-7xl !leading-tight mx-auto max-w text-center">
+        <span className="main-color font-bold">Gestiona</span> bien tu carta y conquista paladares
       </p>
+      <p className="max-w-90 text-center lg:text-base pt-10 -mt-5">
+        No importa si eres un pequeño o grande negocio, estamos
+        ser parte de tu equipo de innovación
+      </p>
+      <div className="pt-10">
+        <Button asChild size="sm" className="rounded-full px-5" variant={"default"}>
+          <Link href="/auth/sign-up">1 mes gratis</Link>
+        </Button>
+      </div>
+       
       <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
     </div>
   );
